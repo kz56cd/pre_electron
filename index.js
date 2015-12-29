@@ -12,7 +12,7 @@ app.on('ready', function () {
         width: 1000,
         height: 600
     });
-    mainWindow.loadUrl('file://' + __dirname + '/index.html');
+    mainWindow.loadURL('file://' + __dirname + '/index.html');
     mainWindow.on('closed', function () {
         mainWindow = null;
     });
