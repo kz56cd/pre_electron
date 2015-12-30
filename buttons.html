@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>buttons</title>
+    <meta name="description" content="">
+    <meta name="keywords" content=""/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="./node_modules/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+  <div v-show="isShow">
+    <p>this text be showing manually.</p>
+  </div>
+
+  <button @click="submit" v-text="firstName + lastName"></button>
+<!--   <button @click="submit"> ---------- </button> -->
+</div>
+
+
+
+<!-- Vue.js -->
+<script>
+    new Vue({
+      el: "#app",
+      data: {
+        firstName: "jeff",
+        lastName: "storner",
+        isShow: true
+      },
+      methods: {
+        submit: function() {
+          alert("hello.");
+        }
+      }
+    })
+</script>
+<!--  / Vue.js -->
+
+</body>
+</html>
