@@ -2,9 +2,10 @@
   "name": "electron_pre01",
   "version": "1.0.0",
   "description": "none",
-  "main": "index.js",
+  "main": "buttons.js",
   "scripts": {
-    "build": "node_modules/.bin/electron ."
+    "build": "node_modules/.bin/electron .",
+    "release": "node release.js"
   },
   "author": "",
   "license": "ISC",
