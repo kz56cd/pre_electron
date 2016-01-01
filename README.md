@@ -8,6 +8,7 @@
 
 - electron
 - vue.js
+- broweserify
 
 # Usage
 
