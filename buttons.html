@@ -8,14 +8,49 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="style.css">
+
+    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+    <link rel="import" href="bower_components/paper-input/all-imports.html">
+    <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+
 </head>
 <body>
 
+<style type="text/css">
+  #app {
+    padding: 50px 50px 50px 50px;
+  }
+
+</style>
+
 <div id="app">
+
+  <div v-show="isShow">
+    <paper-button>Flat button</paper-button>
+    <paper-button raised>Raised button</paper-button>
+    <paper-button noink>No ripple effect</paper-button>
+    <paper-button toggles>Toggle-able button</paper-button>
+  </div>
+
+
+<paper-checkbox>eat pizza ?</paper-checkbox>
+
+<!-- <paper-input label="text input"></paper-input> -->
+<paper-textarea label="autoresizing textarea input"></paper-textarea>
+<!-- <paper-input label="password input" type="password"></paper-input> -->
+<!-- <paper-input label="disabled input" disabled></paper-input> -->
+
+
   <div v-show="isShow">
     <p>this text be showing manually.</p>
   </div>
   <button @click="submit" v-text="firstName + lastName"></button>
+
+
+
+
 <!--   <button @click="submit"> ---------- </button> -->
 </div>
 
