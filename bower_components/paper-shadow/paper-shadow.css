@@ -46,4 +46,21 @@ html /deep/ .paper-shadow-top-z-3 {
 }
 
 html /deep/ .paper-shadow-bottom-z-3 {
-  box-shadow: 0 13px 25
+  box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.3);
+}
+
+html /deep/ .paper-shadow-top-z-4 {
+  box-shadow: 0 14px 12px 0 rgba(0, 0, 0, 0.17);
+}
+
+html /deep/ .paper-shadow-bottom-z-4 {
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.3);
+}
+
+html /deep/ .paper-shadow-top-z-5 {
+  box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+}
+
+html /deep/ .paper-shadow-bottom-z-5 {
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3);
+}

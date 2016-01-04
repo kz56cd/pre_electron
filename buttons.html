@@ -14,6 +14,9 @@
     <link rel="import" href="bower_components/paper-button/paper-button.html">
     <link rel="import" href="bower_components/paper-input/all-imports.html">
     <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+    <!-- <link rel="import" href="bower_components/iron-icons/iron-icons.html"> -->
+    <link rel="import" href="bower_components/iron-icons/maps-icons.html">
+
 
 </head>
 <body>
@@ -27,6 +30,10 @@
 
 <div id="app">
 
+    <iron-icon icon="maps:directions-bus"></iron-icon>
+    <!-- <iron-icon src="star.png"></iron-icon> -->
+
+
   <div v-show="isShow">
     <paper-button>Flat button</paper-button>
     <paper-button raised>Raised button</paper-button>
@@ -34,7 +41,7 @@
     <paper-button toggles>Toggle-able button</paper-button>
   </div>
 
-  <iron-icon src="star.png"></iron-icon>
+
 
 <paper-checkbox>eat pizza ?</paper-checkbox>
 
