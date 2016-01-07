@@ -13,6 +13,7 @@
 
     <link rel="import" href="bower_components/paper-button/paper-button.html">
     <link rel="import" href="bower_components/paper-input/all-imports.html">
+    <link rel="import" href="bower_components/paper-input/paper-input.html">
     <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
     <!-- <link rel="import" href="bower_components/iron-icons/iron-icons.html"> -->
     <link rel="import" href="bower_components/iron-icons/maps-icons.html">
@@ -28,11 +29,9 @@
 
 </style>
 
-<div id="app">
+<div id="app" layout horizontal>
 
-    <iron-icon icon="maps:directions-bus"></iron-icon>
-    <!-- <iron-icon src="star.png"></iron-icon> -->
-
+  <iron-icon icon="maps:directions-bus"></iron-icon>
 
   <div v-show="isShow">
     <paper-button>Flat button</paper-button>
@@ -45,11 +44,7 @@
 
 <paper-checkbox>eat pizza ?</paper-checkbox>
 
-<!-- <paper-input label="text input"></paper-input> -->
 <paper-textarea label="autoresizing textarea input"></paper-textarea>
-<!-- <paper-input label="password input" type="password"></paper-input> -->
-<!-- <paper-input label="disabled input" disabled></paper-input> -->
-
 
   <div v-show="isShow">
     <p>this text be showing manually.</p>
