@@ -7,13 +7,24 @@ var Vue = require('vue')
 new Vue({
   el: "#app",
   data: {
-    firstName: "jeff",
-    lastName: "storner",
-    isShow: true
+    num_label: {
+      design:    "人日：デザイン",
+      markup:    "人日：マークアップ",
+      ios:       "人日：iOS開発",
+      android:   "人日：Android開発",
+      backend:   "人日：バックエンド開発",
+      direction: "人日：設計全般"
+    },
+
+    message: 199,
+
+    t_submit: "この見積を保存する",
+    stub: "status : stub.",
+    isShow: false
   },
   methods: {
     submit: function() {
-      alert("awesome.");
+        alert(this.$data.stub);
     }
   }
 })

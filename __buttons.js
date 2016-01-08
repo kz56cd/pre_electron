@@ -10,7 +10,7 @@ app.on('ready', function () {
     // ブラウザ(Chromium)の起動, 初期画面のロード
     mainWindow = new BrowserWindow({
         width: 1000,
-        height: 700
+        height: 600
     });
     mainWindow.loadURL('file://' + __dirname + '/buttons.html');
     mainWindow.on('closed', function () {

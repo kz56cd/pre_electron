@@ -2,23 +2,18 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>buttons</title>
+    <title>見積シュミレーション</title>
     <meta name="description" content="">
     <meta name="keywords" content=""/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="style.css">
-
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
-
     <link rel="import" href="bower_components/paper-button/paper-button.html">
     <link rel="import" href="bower_components/paper-input/all-imports.html">
     <link rel="import" href="bower_components/paper-input/paper-input.html">
     <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
-    <!-- <link rel="import" href="bower_components/iron-icons/iron-icons.html"> -->
     <link rel="import" href="bower_components/iron-icons/maps-icons.html">
-
-
 </head>
 <body>
 
@@ -27,34 +22,80 @@
     padding: 50px 50px 50px 50px;
   }
 
+  .inputlist {
+    list-style: none;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-padding-start: 0px;
+  }
+
+  .inputlist li {
+    margin: 0px 0px 10px 0px;
+  }
+
+  .inputlist paper-textarea {
+    float: left;
+    min-width: 70%;
+  }
+
+  .inputlist p {
+    float: right;
+  }
+
+  .box-checkbox {
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+  }
+
+  .inputlist li:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+
 </style>
 
 <div id="app" layout horizontal>
 
-  <iron-icon icon="maps:directions-bus"></iron-icon>
 
-  <div v-show="isShow">
-    <paper-button>Flat button</paper-button>
-    <paper-button raised>Raised button</paper-button>
-    <paper-button noink>No ripple effect</paper-button>
-    <paper-button toggles>Toggle-able button</paper-button>
+<!--   <paper-textarea label="autoresizing textarea input" required auto-validate pattern="[0-9]*" maxlength="10"></paper-textarea> -->
+
+  <ul class="inputlist">
+    <li>
+      <paper-textarea label="{{ num_label.design }}" v-model="message" required auto-validate pattern="[0-9]*" maxlength="10"></paper-textarea>
+      <p>{{ message }}</p>
+    </li>
+    <li>
+      <paper-textarea label="{{ num_label.markup }}" required auto-validate pattern="[0-9]*" maxlength="10"></paper-textarea>
+      <p>{{ message }}</p>
+    </li>
+    <li>
+      <paper-textarea label="{{ num_label.ios }}" required auto-validate pattern="[0-9]*" maxlength="10"></paper-textarea>
+      <p>{{ message }}</p>
+    </li>
+    <li>
+      <paper-textarea label="{{ num_label.android }}" required auto-validate pattern="[0-9]*" maxlength="10"></paper-textarea>
+      <p>{{ message }}</p>
+    </li>
+    <li>
+      <paper-textarea label="{{ num_label.backend }}" required auto-validate pattern="[0-9]*" maxlength="10"></paper-textarea>
+      <p>{{ message }}</p>
+    </li>
+    <li>
+      <paper-textarea label="{{ num_label.direction }}" required auto-validate pattern="[0-9]*" maxlength="10"></paper-textarea>
+      <p>{{ message }}</p>
+    </li>
+  </ul>
+
+  <div class="box-checkbox">
+    <paper-checkbox>特別割引</paper-checkbox>
   </div>
-
-
-
-<paper-checkbox>eat pizza ?</paper-checkbox>
-
-<paper-textarea label="autoresizing textarea input"></paper-textarea>
+  <paper-button @click="submit" v-text="t_submit" raised></paper-button >
 
   <div v-show="isShow">
+    <iron-icon icon="maps:directions-bus"></iron-icon>
     <p>this text be showing manually.</p>
   </div>
-  <button @click="submit" v-text="firstName + lastName"></button>
-
-
-
-
-<!--   <button @click="submit"> ---------- </button> -->
 </div>
 
 <!-- Vue.js contents (by browserify) -->
