@@ -30,7 +30,7 @@
   }
 
   .inputlist li {
-    margin: 0px 0px 10px 0px;
+    margin: 20px 0px 20px 0px;
   }
 
   .inputlist paper-textarea {
@@ -38,7 +38,18 @@
     min-width: 70%;
   }
 
+  .inputlist input {
+    float: left;
+    width: 50%;
+  }
+
   .inputlist p {
+    float: left;
+    width: 20%;
+    margin: 0px 0px 0px 0px;
+  }
+
+  .inputlist p.price {
     float: right;
   }
 
@@ -62,7 +73,13 @@
 
   <ul class="inputlist">
     <li>
-      <paper-textarea label="{{ num_label.design }}" v-model="message" required auto-validate pattern="[0-9]*" maxlength="10"></paper-textarea>
+      <input type="text" v-model="message">
+      <p>{{ num_label.design }}</p>
+      <p class="price">{{ message * 20 }}</p>
+    </li>
+
+<!--     <li>
+      <paper-textarea label="{{ num_label.design }}" value="{{message.01::input}}" required auto-validate pattern="[0-9]*" maxlength="10"></paper-textarea>
       <p>{{ message }}</p>
     </li>
     <li>
@@ -85,7 +102,7 @@
       <paper-textarea label="{{ num_label.direction }}" required auto-validate pattern="[0-9]*" maxlength="10"></paper-textarea>
       <p>{{ message }}</p>
     </li>
-  </ul>
+ -->  </ul>
 
   <div class="box-checkbox">
     <paper-checkbox>特別割引</paper-checkbox>
@@ -97,6 +114,8 @@
     <p>this text be showing manually.</p>
   </div>
 </div>
+
+
 
 <!-- Vue.js contents (by browserify) -->
 <script type="text/javascript" src="./bundle.js"></script>
